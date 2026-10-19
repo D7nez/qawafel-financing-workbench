@@ -1,0 +1,206 @@
+{
+  "seed": 42,
+  "payment_seed": 142,
+  "monthly_invoice_counts": {
+    "2025-10": 28,
+    "2025-11": 27,
+    "2025-12": 26,
+    "2026-01": 21,
+    "2026-02": 30,
+    "2026-03": 33,
+    "2026-04": 24,
+    "2026-05": 25,
+    "2026-06": 20,
+    "2026-07": 23,
+    "2026-08": 28,
+    "2026-09": 26
+  },
+  "customer_profiles": {
+    "CUST-01": {
+      "weight": 25,
+      "median": 6500,
+      "terms": [
+        21,
+        30,
+        45
+      ],
+      "late": [
+        -5,
+        0,
+        2,
+        5,
+        10
+      ],
+      "unpaid": 0.02
+    },
+    "CUST-02": {
+      "weight": 17,
+      "median": 4500,
+      "terms": [
+        30,
+        45,
+        60
+      ],
+      "late": [
+        0,
+        3,
+        7,
+        14,
+        21
+      ],
+      "unpaid": 0.04
+    },
+    "CUST-03": {
+      "weight": 13,
+      "median": 5500,
+      "terms": [
+        30,
+        45,
+        60
+      ],
+      "late": [
+        25,
+        45,
+        60,
+        90,
+        120
+      ],
+      "unpaid": 0.22
+    },
+    "CUST-04": {
+      "weight": 11,
+      "median": 3000,
+      "terms": [
+        14,
+        21,
+        30
+      ],
+      "late": [
+        -3,
+        0,
+        0,
+        3,
+        7
+      ],
+      "unpaid": 0.01
+    },
+    "CUST-05": {
+      "weight": 9,
+      "median": 4000,
+      "terms": [
+        30,
+        45,
+        60,
+        75
+      ],
+      "late": [
+        0,
+        5,
+        10,
+        20,
+        30
+      ],
+      "unpaid": 0.06
+    },
+    "CUST-06": {
+      "weight": 8,
+      "median": 2800,
+      "terms": [
+        14,
+        30,
+        45
+      ],
+      "late": [
+        0,
+        0,
+        3,
+        7,
+        14
+      ],
+      "unpaid": 0.02
+    },
+    "CUST-07": {
+      "weight": 6,
+      "median": 5000,
+      "terms": [
+        30,
+        60,
+        90
+      ],
+      "late": [
+        0,
+        7,
+        14,
+        21,
+        35
+      ],
+      "unpaid": 0.05
+    },
+    "CUST-08": {
+      "weight": 5,
+      "median": 2500,
+      "terms": [
+        21,
+        30,
+        45
+      ],
+      "late": [
+        -3,
+        0,
+        0,
+        5,
+        10
+      ],
+      "unpaid": 0.02
+    },
+    "CUST-09": {
+      "weight": 4,
+      "median": 6000,
+      "terms": [
+        45,
+        60,
+        90,
+        120
+      ],
+      "late": [
+        45,
+        60,
+        90,
+        120,
+        150
+      ],
+      "unpaid": 0.35
+    },
+    "CUST-10": {
+      "weight": 2,
+      "median": 3500,
+      "terms": [
+        30,
+        45,
+        60
+      ],
+      "late": [
+        0,
+        5,
+        10,
+        15,
+        30
+      ],
+      "unpaid": 0.05
+    }
+  },
+  "amount_distribution": "Customer-specific lognormal, sigma 0.78; bounded SAR 450-60,000 before seasonal/growth multipliers; one disclosed planted order.",
+  "entity": "Fictional Cedar Wholesale",
+  "period": "2025-10-01 to 2026-09-30",
+  "invoice_count": 311,
+  "transaction_count": 362,
+  "known_review_cases": [
+    {
+      "invoice_id": "INV-202605-010",
+      "reason": "Deliberately planted large order for a slow-paying customer; sanity check only, not model accuracy evidence."
+    }
+  ],
+  "dirty_fixture": "Duplicate final row; negative amount at Excel row 42; USD at row 82; malformed due date at row 122. Corresponding bank receipts may become unmatched.",
+  "rounding": "Amounts stored in halalas; synthetic VAT 15%, half-up.",
+  "bank": "One fictional account; opening cash SAR 350,000; receipts, expenses and owner capital; no opening receivables."
+}
